@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Hệ điều hành / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Thư mục làm việc tạm: chạy 4 script generate_*.py ở đây để KHÔNG ghi đè file trong Data/
+# (mỗi file .npy đầu ra nặng ~98 MB, GitHub cảnh báo từ 50 MB và chặn từ 100 MiB)
+scratch/
