@@ -1,0 +1,22 @@
+vi du khoa test: [('2017-10-24', 'Lockheed Martin Corp.'), ('2017-10-24', 'Masco Corp.')]
+Van ban test co gia: 85/113
+Kiem tra: huong gia khop nhan tac gia 85/85 (mong doi 85/85)
+Sieu tham so chon theo val: depth=3, trees=300 (val ACC=0.531)
+
+=== Mo phong giao dich (n=3 ngay, 85 van ban, dau tu deu moi co phieu) ===
+Chien luoc                    Profit Ratio %    Sharpe
+Buy-all                                0.097     0.024
+Short-sell-all                        -0.097    -0.024
+Random (TB 2000 lan)                   0.005     0.001
+XGB-TFIDF tren orig             -0.129±0.15  -0.033±0.04
+XGB-TFIDF tren add               0.574±0.22   0.146±0.06
+XGB-TFIDF tren neg              -0.341±0.16  -0.086±0.04
+XGB-TFIDF tren sym              -0.129±0.15  -0.033±0.04
+XGB-TFIDF tren tra              -0.226±0.11  -0.057±0.03
+(Bai bao Bang 3, n=3: Buy-all 3.681 / Short-sell-all -3.681 / Random -0.271)
+
+=== ACC trung binh 10 seed, khoang tin cay 95% (bootstrap tren van ban) ===
+ACC orig            : 0.484  CI [0.406, 0.562]
+Doan toan 'giam'    : 0.593  CI [0.504, 0.681]
+Hieu orig - 'giam'  : -0.109  CI [-0.223, +0.007]
+Neu CI cua hieu chua 0 -> khong ket luan duoc mo hinh tot hon doan toan 'giam'.
