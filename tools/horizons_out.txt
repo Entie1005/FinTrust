@@ -1,0 +1,109 @@
+Gia den ngay: 2018-03-14
+
+======================================================================
+KY HAN 3 NGAY
+train 337/337 | val 49/49 | test co nhan 85/113
+ti le nhan 'tang': train 0.484 | val 0.592 | test 0.412
+sieu tham so: depth=3, trees=300 (val ACC=0.531)
+
+bo               ACC            F1           MCC       Consis*
+orig    0.481+-0.023  0.387+-0.022 -0.062+-0.042             -
+add     0.515+-0.037  0.505+-0.037  0.056+-0.075  0.639+-0.030
+neg     0.549+-0.033  0.555+-0.040  0.128+-0.066  0.097+-0.014
+sym     0.481+-0.023  0.387+-0.022 -0.062+-0.042  0.997+-0.006
+tra     0.467+-0.021  0.375+-0.024 -0.089+-0.039  0.958+-0.018
+Consis trung binh 4 phep: 0.673   (*tinh tren tat ca 113 van ban)
+
+Giao dich (85 lenh)   Profit%   Sharpe
+Buy-all                   0.097    0.024
+Short-sell-all           -0.097   -0.024
+Random                    0.005    0.001
+XGB-TFIDF orig           -0.129   -0.033
+XGB-TFIDF add             0.574    0.146
+XGB-TFIDF neg            -0.341   -0.086
+XGB-TFIDF sym            -0.129   -0.033
+XGB-TFIDF tra            -0.226   -0.057
+
+ACC orig 0.481 CI95 [0.393,0.572] | doan lop da so 0.588
+Hieu ACC - lop da so: -0.107 CI95 [-0.233,+0.021]  (CI chua 0 => khong ket luan duoc)
+
+======================================================================
+KY HAN 7 NGAY
+train 337/337 | val 49/49 | test co nhan 85/113
+ti le nhan 'tang': train 0.478 | val 0.551 | test 0.565
+sieu tham so: depth=2, trees=100 (val ACC=0.612)
+
+bo               ACC            F1           MCC       Consis*
+orig    0.501+-0.028  0.531+-0.037  0.002+-0.053             -
+add     0.512+-0.047  0.595+-0.039 -0.015+-0.101  0.690+-0.033
+neg     0.496+-0.040  0.415+-0.050 -0.027+-0.082  0.110+-0.023
+sym     0.501+-0.028  0.531+-0.037  0.002+-0.053  1.000+-0.000
+tra     0.494+-0.027  0.523+-0.038 -0.012+-0.051  0.970+-0.016
+Consis trung binh 4 phep: 0.692   (*tinh tren tat ca 113 van ban)
+
+Giao dich (85 lenh)   Profit%   Sharpe
+Buy-all                   0.239    0.051
+Short-sell-all           -0.239   -0.051
+Random                    0.003    0.001
+XGB-TFIDF orig            0.235    0.050
+XGB-TFIDF add            -0.033   -0.007
+XGB-TFIDF neg             0.279    0.059
+XGB-TFIDF sym             0.235    0.050
+XGB-TFIDF tra             0.244    0.052
+
+ACC orig 0.501 CI95 [0.414,0.591] | doan lop da so 0.565
+Hieu ACC - lop da so: -0.064 CI95 [-0.201,+0.074]  (CI chua 0 => khong ket luan duoc)
+
+======================================================================
+KY HAN 15 NGAY
+train 337/337 | val 49/49 | test co nhan 85/113
+ti le nhan 'tang': train 0.507 | val 0.531 | test 0.576
+sieu tham so: depth=2, trees=100 (val ACC=0.578)
+
+bo               ACC            F1           MCC       Consis*
+orig    0.551+-0.028  0.596+-0.027  0.091+-0.057             -
+add     0.535+-0.033  0.578+-0.030  0.063+-0.072  0.682+-0.038
+neg     0.462+-0.035  0.438+-0.049 -0.065+-0.077  0.081+-0.036
+sym     0.548+-0.030  0.592+-0.032  0.088+-0.061  0.994+-0.006
+tra     0.555+-0.036  0.607+-0.033  0.095+-0.073  0.964+-0.015
+Consis trung binh 4 phep: 0.680   (*tinh tren tat ca 113 van ban)
+
+Giao dich (85 lenh)   Profit%   Sharpe
+Buy-all                   0.827    0.156
+Short-sell-all           -0.827   -0.156
+Random                   -0.005   -0.001
+XGB-TFIDF orig            0.461    0.088
+XGB-TFIDF add             0.641    0.120
+XGB-TFIDF neg             0.293    0.055
+XGB-TFIDF sym             0.423    0.080
+XGB-TFIDF tra             0.474    0.090
+
+ACC orig 0.551 CI95 [0.476,0.624] | doan lop da so 0.576
+Hieu ACC - lop da so: -0.026 CI95 [-0.147,+0.100]  (CI chua 0 => khong ket luan duoc)
+
+======================================================================
+KY HAN 30 NGAY
+train 337/337 | val 49/49 | test co nhan 85/113
+ti le nhan 'tang': train 0.579 | val 0.612 | test 0.624
+sieu tham so: depth=3, trees=100 (val ACC=0.565)
+
+bo               ACC            F1           MCC       Consis*
+orig    0.552+-0.039  0.664+-0.030 -0.002+-0.091             -
+add     0.581+-0.028  0.703+-0.022  0.026+-0.065  0.752+-0.025
+neg     0.439+-0.033  0.502+-0.025  0.000+-0.073  0.072+-0.021
+sym     0.552+-0.041  0.664+-0.032 -0.002+-0.093  0.998+-0.004
+tra     0.553+-0.037  0.671+-0.031 -0.014+-0.082  0.959+-0.013
+Consis trung binh 4 phep: 0.695   (*tinh tren tat ca 113 van ban)
+
+Giao dich (85 lenh)   Profit%   Sharpe
+Buy-all                   2.605    0.368
+Short-sell-all           -2.605   -0.368
+Random                    0.001    0.000
+XGB-TFIDF orig            0.868    0.117
+XGB-TFIDF add             1.834    0.252
+XGB-TFIDF neg             1.074    0.145
+XGB-TFIDF sym             0.909    0.122
+XGB-TFIDF tra             1.021    0.138
+
+ACC orig 0.552 CI95 [0.461,0.641] | doan lop da so 0.624
+Hieu ACC - lop da so: -0.072 CI95 [-0.168,+0.028]  (CI chua 0 => khong ket luan duoc)
