@@ -1,4 +1,48 @@
+"""
+Code/generate_neg_consis.py  --  phép biến đổi NEGATION của FinTrust.
+
+Ý tưởng (bài báo, mục 3.1): thay các từ bằng từ TRÁI NGHĨA theo bộ luật cố định để đảo ngược ý nghĩa
+tài chính của văn bản; mô hình nhất quán phải ĐỔI dự đoán  f(x)=tăng <=> f(¬x)=giảm.
+=> Script này LẬT NHÃN của MỌI văn bản ('1.0' <-> '0.0') và thay từ trong văn bản.
+
+Đầu vào : <data-dir>/earnings_call_3days.npy   (113 dòng x 4 cột: ngày, nhãn, tên công ty, văn bản)
+Đầu ra  : <out-dir>/neg_earnings_call_3days.npy
+
+Cách chạy (từ bất kỳ thư mục nào):
+    python Code/generate_neg_consis.py
+    python Code/generate_neg_consis.py --data-dir D:/du_lieu --out-dir D:/ket_qua
+
+Mặc định ghi vào <gốc repo>/scratch/ (đã nằm trong .gitignore) để KHÔNG ghi đè file ~98 MB trong Data/.
+
+Ghi chú: bản này chỉ thêm xử lý đường dẫn/dòng lệnh và chú thích. Hàm replace_words() (chuỗi if/elif 97 luật)
+và logic make_neg() giữ NGUYÊN (đầu ra khớp từng ký tự với Data/neg_earnings_call_3days.npy của tác giả).
+replace_words() được các script demo/extension import lại, nên phần chạy chính nằm sau `if __name__ == "__main__"`.
+
+Cách hoạt động của replace_words: mỗi câu chỉ bị thay MỘT LOẠI từ, vì các luật nối bằng elif và hàm return ngay
+khi gặp luật đầu tiên khớp; thứ tự luật quyết định luật nào thắng khi câu có nhiều từ. Luật chỉ khớp khi từ
+đứng giữa hai dấu cách (" more "), nên từ ở đầu/cuối câu hoặc dính dấu câu ("more,") không bị thay.
+"""
+import argparse
+from pathlib import Path
+
 import numpy as np
+
+ROOT = Path(__file__).resolve().parents[1]   # gốc repo = thư mục cha của Code/
+DEFAULT_DATA = ROOT / "Data"
+DEFAULT_OUT = ROOT / "scratch"
+
+
+def parse_args(argv=None):
+    ap = argparse.ArgumentParser(description="Sinh dữ liệu kiểm thử Negation consistency (FinTrust).")
+    ap.add_argument("--data-dir", type=Path, default=DEFAULT_DATA, help="thư mục chứa earnings_call_3days.npy")
+    ap.add_argument("--out-dir", type=Path, default=DEFAULT_OUT, help="thư mục ghi file kết quả")
+    ap.add_argument("--force", action="store_true", help="cho phép ghi đè vào chính thư mục dữ liệu")
+    args = ap.parse_args(argv)
+    if args.out_dir.resolve() == args.data_dir.resolve() and not args.force:
+        ap.error("out-dir trùng data-dir: sẽ ghi đè file gốc. Dùng --out-dir khác, hoặc thêm --force nếu chủ ý.")
+    args.out_dir.mkdir(parents=True, exist_ok=True)
+    return args
+
 
 def replace_words(sent):
   sent = sent.lower()
@@ -199,25 +243,28 @@ def replace_words(sent):
   else:
       return sent
 
-def make_neg():
-    test_list = np.load("earnings_call_3days.npy")
-    for i in test_list:
+def make_neg(data_dir=DEFAULT_DATA, out_dir=DEFAULT_OUT):
+    test_list = np.load(Path(data_dir) / "earnings_call_3days.npy")
+    for i in test_list:                      # i = [ngày, nhãn, tên công ty, văn bản]
         # print(i)
-        if i[1] == '1.0':
+        if i[1] == '1.0':                    # LẬT NHÃN: tăng -> giảm
             i[1] = '0.0'
-        else:
+        else:                                # mọi giá trị khác '1.0' (kể cả '0.0') -> '1.0'
             i[1] = '1.0'
-        text = i[3].replace('\n', '.\n')
-        text = text.split('\n')
+        text = i[3].replace('\n', '.\n')     # thêm '.' cuối mỗi dòng
+        text = text.split('\n')              # tách thành từng dòng
         neg_text = ''
         for j in text:
-            j = replace_words(j)
+            j = replace_words(j)             # thay một loại từ trong dòng (đồng thời đưa về chữ thường)
             neg_text += j
             neg_text += " "
-        i[3] = neg_text.replace('. ','\n')
+        i[3] = neg_text.replace('. ', '\n')  # nối lại: ". " -> xuống dòng
         # print(i)
-    np.save("neg_earnings_call_3days.npy", test_list)
+    out = Path(out_dir) / "neg_earnings_call_3days.npy"
+    np.save(out, test_list)
+    print(f"Đã ghi {out}  ({len(test_list)} văn bản)")
 
 
 if __name__ == "__main__":
-    make_neg()
+    a = parse_args()
+    make_neg(a.data_dir, a.out_dir)
