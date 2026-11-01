@@ -66,11 +66,23 @@ def main(fetch_yahoo=from_yahoo):
         close = close.drop(columns=[c for c in add.columns if c in close.columns]).join(add, how="outer").sort_index()
         close.to_csv(pc)
     m = pd.read_csv(nm, keep_default_na=False)
-    have = set(m["name"])
-    rows = [{**{c: "" for c in m.columns}, "name": n, "ticker": t} for n, t in NEW_NAMES.items() if n not in have]
-    if rows:
-        m = pd.concat([m, pd.DataFrame(rows)], ignore_index=True); m.to_csv(nm, index=False)
-    print(f"\nDa them gia cho {len(got)} ma; them {len(rows)} ten vao name_map.csv.")
+    extra_col = m.columns[2] if len(m.columns) > 2 else None   # vd. cot 'exact' (kieu khop)
+    n_set = 0
+    for name, t in NEW_NAMES.items():
+        hit = m.index[m["name"] == name]
+        if len(hit):                         # ten da co nhung ticker dang TRONG -> dien vao
+            for i in hit:
+                if str(m.at[i, "ticker"]).strip() == "":
+                    m.at[i, "ticker"] = t
+                    if extra_col: m.at[i, extra_col] = "manual"
+                    n_set += 1
+        else:                                # ten chua co -> them dong moi
+            row = {c: "" for c in m.columns}; row["name"] = name; row["ticker"] = t
+            if extra_col: row[extra_col] = "manual"
+            m = pd.concat([m, pd.DataFrame([row])], ignore_index=True); n_set += 1
+    m.to_csv(nm, index=False)
+    rows = range(n_set)
+    print(f"\nDa them gia cho {len(got)} ma; dien/them {n_set} ten trong name_map.csv.")
     if failed:
         print("CHUA CO GIA:", failed)
         print("-> Tai Kaggle 'S&P 500 stock data' (camnugent/sandp500, file all_stocks_5yr.csv), dat vao tools\\, roi chay lai script nay.")

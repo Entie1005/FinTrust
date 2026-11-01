@@ -1,0 +1,281 @@
+name,ticker,how
+3M Company,MMM,exact
+A.O. Smith Corp,AOS,exact
+ABIOMED Inc,ABMD,none
+AES Corp,AES,exact
+AMETEK Inc.,AME,exact
+AT&T Inc.,T,exact
+AbbVie Inc.,ABBV,exact
+Abbott Laboratories,ABT,exact
+Activision Blizzard,ATVI,exact
+Adobe Systems Inc,ADBE,exact
+Advance Auto Parts,AAP,exact
+Advanced Micro Devices Inc,AMD,exact
+Aetna Inc,AET,exact
+Agilent Technologies Inc,A,exact
+Akamai Technologies Inc,AKAM,exact
+Alaska Air Group Inc,ALK,exact
+Alexion Pharmaceuticals,ALXN,exact
+Align Technology,ALGN,exact
+Allegion,ALLE,exact
+"Allergan, Plc",AGN,exact
+Alliance Data Systems,BFH,exact
+Altria Group Inc,MO,exact
+Amazon.com Inc.,AMZN,exact
+Ameren Corp,AEE,exact
+American Express Co,AXP,exact
+American Tower Corp A,AMT,exact
+AmerisourceBergen Corp,COR,exact
+Amgen Inc.,AMGN,manual
+Anthem Inc.,ELV,exact
+Aon plc,AON,exact
+Apache Corporation,APA,exact
+Archer-Daniels-Midland Co,ADM,exact
+Autodesk Inc.,ADSK,exact
+Automatic Data Processing,ADP,exact
+Avery Dennison Corp,AVY,exact
+Ball Corp,BALL,exact
+Baxter International Inc.,BAX,exact
+Becton Dickinson,BDX,exact
+Biogen Inc.,BIIB,exact
+Boeing Company,BA,exact
+Booking Holdings Inc,BKNG,manual
+BorgWarner,BWA,exact
+Bristol-Myers Squibb,BMY,exact
+Broadridge Financial Solutions,BR,none
+"CA, Inc.",CA,exact
+CBRE Group,CBRE,exact
+CBS Corp.,CBS,exact
+CIGNA Corp.,CI,exact
+CME Group Inc.,CME,exact
+CMS Energy,CMS,exact
+CVS Health,CVS,exact
+Cadence Design Systems,CDNS,exact
+Campbell Soup,CPB,exact
+Cardinal Health Inc.,CAH,exact
+Carmax Inc,KMX,exact
+Caterpillar Inc.,CAT,exact
+Cboe Global Markets,CBOE,none
+Celgene Corp.,CELG,exact
+CenturyLink Inc,LUMN,exact
+Chevron Corp.,CVX,exact
+Church & Dwight,CHD,exact
+Cimarex Energy,XEC,exact
+Cisco Systems,CSCO,exact
+Citigroup Inc.,C,exact
+Citrix Systems,CTXS,exact
+Coca-Cola Company (The),KO,exact
+Cognizant Technology Solutions,CTSH,exact
+Comcast Corp.,CMCSA,exact
+Comerica Inc.,CMA,exact
+Conagra Brands,CAG,exact
+Corning Inc.,GLW,exact
+"Coty, Inc",COTY,exact
+Crown Castle International Corp.,CCI,exact
+Cummins Inc.,CMI,exact
+D. R. Horton,DHI,exact
+DTE Energy Co.,DTE,exact
+DaVita Inc.,DVA,exact
+Darden Restaurants,DRI,exact
+Digital Realty Trust Inc,DLR,exact
+Dish Network,DISH,exact
+Dollar General,DG,exact
+Dominion Energy,D,exact
+Dover Corp.,DOV,exact
+Duke Energy,DUK,exact
+EQT Corporation,EQT,exact
+Ecolab Inc.,ECL,exact
+Edison Int'l,EIX,exact
+Edwards Lifesciences,EW,exact
+Electronic Arts,EA,exact
+Emerson Electric Company,EMR,exact
+Equinix,EQIX,exact
+Estee Lauder Cos.,EL,exact
+Exxon Mobil Corp.,XOM,exact
+F5 Networks,FFIV,exact
+FLIR Systems,FLIR,exact
+"Facebook, Inc.",META,exact
+Fidelity National Information Services,FIS,exact
+Fifth Third Bancorp,FITB,exact
+FleetCor Technologies Inc,CPAY,none
+Foot Locker Inc,FL,exact
+Ford Motor,F,exact
+Fortive Corp,FTV,exact
+Fortune Brands Home & Security,FBIN,exact
+Franklin Resources,BEN,exact
+Freeport-McMoRan Inc.,FCX,exact
+Gap Inc.,GAP,exact
+Garmin Ltd.,GRMN,exact
+Gartner Inc,IT,exact
+General Dynamics,GD,exact
+General Growth Properties Inc.,GGP,exact
+General Mills,GIS,exact
+General Motors,GM,exact
+Genuine Parts,GPC,exact
+Gilead Sciences,GILD,exact
+Goldman Sachs Group,GS,exact
+Goodyear Tire & Rubber,GT,exact
+Grainger (W.W.) Inc.,GWW,exact
+HCA Holdings,HCA,exact
+HP Inc.,HPQ,exact
+Halliburton Co.,HAL,exact
+Hanesbrands Inc,HBI,exact
+Harris Corporation,LHX,exact
+Hasbro Inc.,HAS,exact
+Henry Schein,HSIC,exact
+Hess Corporation,HES,exact
+Hewlett Packard Enterprise,HPE,exact
+Hilton Worldwide Holdings Inc,HLT,exact
+Hologic,HOLX,exact
+Home Depot,HD,exact
+Hormel Foods Corp.,HRL,exact
+Humana Inc.,HUM,exact
+IPG Photonics Corp.,IPGP,none
+Illinois Tool Works,ITW,exact
+Illumina Inc,ILMN,exact
+Incyte,INCY,exact
+Ingersoll-Rand PLC,IR,exact
+Intel Corp.,INTC,exact
+Intercontinental Exchange,ICE,exact
+International Paper,IP,exact
+Interpublic Group,IPG,exact
+Intuit Inc.,INTU,exact
+Invesco Ltd.,IVZ,exact
+Iron Mountain Incorporated,IRM,exact
+JPMorgan Chase & Co.,JPM,exact
+Johnson Controls International,JCI,exact
+Juniper Networks,JNPR,exact
+KLA-Tencor Corp.,KLAC,exact
+Kansas City Southern,KSU,exact
+Kellogg Co.,K,exact
+Kimberly-Clark,KMB,exact
+Kinder Morgan,KMI,exact
+Kohl's Corp.,KSS,exact
+Kraft Heinz Co,KHC,exact
+Kroger Co.,KR,exact
+LKQ Corporation,LKQ,exact
+Lam Research,LRCX,exact
+Lennar Corp.,LEN,exact
+Lilly (Eli) & Co.,LLY,exact
+Lockheed Martin Corp.,LMT,exact
+Lowe's Cos.,LOW,exact
+LyondellBasell,LYB,exact
+MGM Resorts International,MGM,exact
+MSCI Inc,MSCI,none
+Marsh & McLennan,MMC,exact
+Martin Marietta Materials,MLM,exact
+Masco Corp.,MAS,exact
+Mastercard Inc.,MA,exact
+Mattel Inc.,MAT,exact
+McDonald's Corp.,MCD,exact
+Merck & Co.,MRK,exact
+Michael Kors Holdings,CPRI,exact
+Micron Technology,MU,exact
+Microsoft Corp.,MSFT,exact
+Molson Coors Brewing Company,TAP,exact
+Mondelez International,MDLZ,exact
+Motorola Solutions Inc.,MSI,exact
+Mylan N.V.,VTRS,exact
+NRG Energy,NRG,exact
+"Nasdaq, Inc.",NDAQ,exact
+Nektar Therapeutics,NKTR,manual
+NetApp,NTAP,exact
+Newell Brands,NWL,exact
+Newmont Mining Corporation,NEM,exact
+News Corp. Class A,NWSA,exact
+NiSource Inc.,NI,exact
+Nielsen Holdings,NLSN,exact
+Nike,NKE,exact
+Noble Energy Inc,NBL,exact
+Nordstrom,JWN,exact
+Norfolk Southern Corp.,NSC,exact
+Norwegian Cruise Line,NCLH,exact
+Nucor Corp.,NUE,exact
+Nvidia Corporation,NVDA,exact
+Oracle Corp.,ORCL,exact
+PACCAR Inc.,PCAR,exact
+PG&E Corp.,PCG,exact
+PPG Industries,PPG,exact
+PPL Corp.,PPL,exact
+Parker-Hannifin,PH,exact
+PayPal,PYPL,exact
+Pentair plc,PNR,exact
+PepsiCo Inc.,PEP,exact
+PerkinElmer,RVTY,exact
+Perrigo,PRGO,exact
+Pinnacle West Capital,PNW,exact
+Polo Ralph Lauren Corp.,RL,exact
+Prologis,PLD,exact
+Public Serv. Enterprise Inc.,PEG,exact
+Quanta Services Inc.,PWR,exact
+Quest Diagnostics,DGX,exact
+Raytheon Co.,RTN,exact
+Red Hat Inc.,RHT,exact
+Regeneron,REGN,exact
+Regions Financial Corp.,RF,exact
+Republic Services Inc,RSG,exact
+ResMed,RMD,exact
+Rockwell Automation Inc.,ROK,exact
+Roper Technologies,ROP,exact
+Ross Stores,ROST,exact
+Royal Caribbean Cruises Ltd,RCL,exact
+SCANA Corp,SCG,exact
+SVB Financial,SVB,none
+Salesforce.com,CRM,exact
+Schlumberger Ltd.,SLB,exact
+Seagate Technology,STX,exact
+Sealed Air,SEE,exact
+Sempra Energy,SRE,exact
+Sherwin-Williams,SHW,exact
+Skyworks Solutions,SWKS,exact
+Snap-On Inc.,SNA,exact
+Starbucks Corp.,SBUX,exact
+Stericycle Inc,SRCL,exact
+Stryker Corp.,SYK,exact
+SunTrust Banks,STI,exact
+Symantec Corp.,GEN,exact
+Synopsys Inc.,SNPS,exact
+Sysco Corp.,SYY,exact
+TE Connectivity Ltd.,TEL,exact
+"Tapestry, Inc.",TPR,exact
+Target Corp.,TGT,exact
+Texas Instruments,TXN,exact
+The Bank of New York Mellon Corp.,BNY,exact
+The Clorox Company,CLX,exact
+The Cooper Companies,COO,exact
+The Hershey Company,HSY,exact
+The Mosaic Company,MOS,exact
+The Walt Disney Company,DIS,exact
+Thermo Fisher Scientific,TMO,exact
+Tiffany & Co.,TIF,exact
+Tractor Supply Company,TSCO,exact
+TransDigm Group,TDG,exact
+"Twitter, Inc.",TWTR,none
+Tyson Foods,TSN,exact
+U.S. Bancorp,USB,exact
+Ulta Beauty,ULTA,manual
+United Health Group Inc.,UNH,exact
+United Parcel Service,UPS,exact
+United Technologies,RTX,exact
+Valero Energy,VLO,exact
+Varian Medical Systems,VAR,exact
+Ventas Inc,VTR,exact
+Verisign Inc.,VRSN,exact
+Verizon Communications,VZ,exact
+Viacom Inc.,VIAB,exact
+Vulcan Materials,VMC,exact
+Walgreens Boots Alliance,WBA,exact
+Walmart,WMT,manual
+Waste Management Inc.,WM,exact
+Wec Energy Group Inc,WEC,exact
+Welltower Inc.,WELL,exact
+WestRock,WRK,manual
+Western Digital,WDC,exact
+Western Union Co,WU,exact
+Weyerhaeuser,WY,exact
+XL Group,XL,manual
+Xcel Energy Inc,XEL,exact
+Xerox,XRX,exact
+Xilinx,XLNX,exact
+Yum! Brands Inc,YUM,exact
+eBay Inc.,EBAY,exact
