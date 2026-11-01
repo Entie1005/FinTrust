@@ -1,4 +1,4 @@
-import pickle, re, pathlib
+﻿import pickle, re, pathlib
 import numpy as np, pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from xgboost import XGBClassifier
@@ -44,7 +44,7 @@ r_all = np.array([r if r is not None else np.nan for r in ret])
 y = np.array([test["orig"][k][0] for k in keys])
 print(f"Van ban test co gia: {use.sum()}/{len(keys)}")
 agree = ((r_all[use] > 0).astype(int) == y[use]).sum()
-print(f"Kiem tra: huong gia khop nhan tac gia {agree}/{use.sum()} (mong doi 85/85)")
+print(f"Kiem tra: huong gia khop nhan tac gia {agree}/{use.sum()} (mong doi 113/113)")
 
 # ---- huan luyen giong run_xgb_full.py ----
 Xtr_t, ytr = [x[2] for x in train], np.array([x[3] for x in train])
