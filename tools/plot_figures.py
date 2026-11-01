@@ -16,7 +16,9 @@ plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 10,
 C = ["#0072B2", "#E69F00", "#009E73", "#D55E00", "#7F7F7F"]
 
 # ---------- doc log ----------
-txt = LOG.read_bytes().decode("utf-8", errors="ignore")
+raw = LOG.read_bytes()
+# PowerShell 5 ghi file bang ">" o dang UTF-16; xu ly ca hai
+txt = raw.decode("utf-16") if raw[:2] in (b"\xff\xfe", b"\xfe\xff") else raw.decode("utf-8", errors="ignore")
 blocks = re.split(r"KY HAN (\d+) NGAY", txt)
 H = {}
 for i in range(1, len(blocks), 2):
